@@ -1,0 +1,17 @@
+<div (click)="addToSelected()" class="col">
+    <div class="card h-100" [ngClass]="{'bg-secondary': selected}">
+    <img src="https://storage.googleapis.com/web-semilleros/films-image.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{film.title}}</h5>
+        <p class="card-text"><b>Age:</b> {{film.age}}</p>
+        <p class="card-text"><b>Year:</b> {{film.year}}</p>
+        <p class="card-text"><b>Director:</b> {{film.directors}}</p>
+        <p class="card-text"><b>IMDb:</b> {{film.iMDb}}</p>
+        <p class="card-text"><b>Rotten Tomatoes:</b> {{film.rottenTomatoes}}</p>
+        <p class="card-text"><b>Duration:</b> {{film.runtime}} mins</p>
+    </div>
+    <div class="card-footer">
+        <span class="badge rounded-pill bg-primary" *ngFor="let genre of film.genres">{{genre}}</span>
+    </div>
+    </div>
+</div>

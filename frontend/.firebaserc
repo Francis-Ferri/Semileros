@@ -1,0 +1,18 @@
+{
+  "targets": {
+    "firechat-4ea50": {
+      "hosting": {
+        "frontend": [
+          "firechat-4ea50"
+        ]
+      }
+    },
+    "streaming-semilleros": {
+      "hosting": {
+        "frontend": [
+          "streaming-semilleros"
+        ]
+      }
+    }
+  }
+}
