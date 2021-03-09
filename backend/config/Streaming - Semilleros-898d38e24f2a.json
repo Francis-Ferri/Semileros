@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "streaming-semilleros",
+  "private_key_id": "898d38e24f2ae122adfd3ccbd1a32ee331cb1aa9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCsXNd/dqUALeWj\nCYeTISbkq12rohrkZBfk9E9jT4WEfQIC+ko/wF6PLjG9gECSW7b5K/ztmrovCfc+\nK/fe15RL50kZzJp/oisusCet42QCwMIF9sb8Pjshf/C2nqWK+O8489+M5xfsDjhL\nV+VlLJLxMM1+BZKg0uR2Rme9w9RvwXexkZ1GfcBA0V0XPKSbXFn4OJRrtkaHv4D+\n8tuTJEOAp5Wpyq8t6yoDtmE5G0+Af23tulzc4J+JCfDgrxfzMQOfefsZyFSmhkal\n8r+uidNQxp5UPo7DRcWB0PlA9gMkvtV/sRBbR/wd12KMoUcQQMUfybS7s/QYtshZ\nOJK9pnINAgMBAAECggEABfg8jHvG+4pwvXoAhJOC3dZOQGS1FWZJaj1zRxzDd+hp\nJUJBnRNOvcXF+kASvHRJvOKNouBs2gvjJiJEC6dKycA2c3Ah2mbQTmXSfKl3Vshn\nT+k7+2jfsml/JEwQBBAFdQ2ul0TlEAtutAlUzBwZm29AcWtu/dFKvAqfNYmD9joz\ncHJ8JbuV8NhIpSD0EJmkqEMGkx75QusNpp4GlZ9TvoY+l7EJjLpwJ2tCa9kPklW7\n74Qfsk1oEMBRRK6DI8uz9Q6qi+JPv888MRML4cMyqgzv1opCiBj/SBPNmz/r9gH1\nhOCe6O/9Z2AWjuvTDoKAZ4cy99hIDD2PjS9z9nKV8QKBgQDWb9dFJNJnuACHSnag\n2ErGtjm/Wr4NP+69K1PvMib0NcsuNQ2wDZLC/sO7kVQ2td7Xwy5geGvs1XOQnZie\nqioxYfG7GZBO1mSKzS+FdkBWsoH81SnKufLX2PCCcxiC/4QKe86+t8EGnk5gN3Jg\nfbCOua+Xam7JI4xeDWpRAoi3FQKBgQDNxVE88eXhN5rjXNMdBPxrBgfCuO/CazZ8\n7ENNL9g4DpRSfEe2RplhCgOZ+F0W3f3Yz9fiVDQRtDO+mwvRKlRjSc/MrIfW9OHX\nezz2pX19APYNUfTldIpRmKn8124L7gzGOLUZDWxqlTDIP4XvPOqZdQPvJXtkJ8F0\nuDpTCR6NGQKBgHXCWX+ZJwraWz/wvpC59uaFL9VL6c6w61RrNN7Iteeqmve3Htst\nuQjoi2i3+H1LByOKBi/oMayP07T5NtT7McyIsw1CjqMczX4EDDLIq7Bwuz2zeg3g\na+HpOrsIpc9arpJrRzApDRGrYfMov+EJZSocAreuNUS0BuOnjlkKgTW5AoGASU3Y\n4gA+55u6hvLDlpv3HF1amGjvqPAuyhQU6cN4oIe5GSWDGpFOBL7fh5Nt/j55Nyrb\n+poKrp/mqylq7UnKJFDgQUbZYZ99cRlLH4bXDJgyD4650qBQwj7Dl/pbDs7wKBF9\nmn4ouFOLvFq86PxniuGf1CsjKQvspBsZVAl0o8kCgYEAuKZqvBrCMql8I2Q8RxHM\nwk9ECUcRYOKJwEF1koSkUq56/u0OrYxI313lr6u726dEsnH8LSHgLnqL7WFc+c5P\nRqSMtnAKj2jHF4yeALwg6YdFajQAJ/WqEewaEn0mUlDmzarEObUzq6a7bG/UNpvo\ne1sMGjqdyVMxvjj+REWJSTs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "semilleros-predict@streaming-semilleros.iam.gserviceaccount.com",
+  "client_id": "103004100994561953052",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/semilleros-predict%40streaming-semilleros.iam.gserviceaccount.com"
+}

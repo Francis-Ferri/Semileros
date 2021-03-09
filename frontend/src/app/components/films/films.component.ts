@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Film } from '../../models/film.models';
+import { Observable } from 'rxjs';
+import { Film, FilmPredict } from '../../models/film.models';
 import { FilmsService } from '../../services/films.service';
+import { PredictionService } from '../../services/prediction.service';
 
 @Component({
   selector: 'app-films',
@@ -12,9 +14,16 @@ export class FilmsComponent implements OnInit {
   films: Film[] = [];
   filmsSelected: Film[] = [];
   ableToAdd = true;
+  results = {
+    "Disney+": 0,
+    Hulu: 0,
+    Netflix: 0,
+    "Prime Video": 0
+  };
 
   constructor(
-    private filmsService: FilmsService
+    private filmsService: FilmsService,
+    private predictionService: PredictionService
   ) { 
     this.filmsService.getfilms().subscribe(
       (filmsSnapshot) => {
@@ -26,8 +35,7 @@ export class FilmsComponent implements OnInit {
           const data = filmData.payload.doc.data();
           const film = this.createFilm(id, data);
           this.films.push(film);
-        })
-        console.log(this.films);
+        });
       }
       
     )
@@ -75,10 +83,59 @@ export class FilmsComponent implements OnInit {
     console.log(this.filmsSelected);
   }
 
-  recommend(){
-    alert("Se mando a predecir");
+  async recommend(){
+    const results = {
+      "Disney+": 0,
+      Hulu: 0,
+      Netflix: 0,
+      "Prime Video": 0
+    };
+    await Promise.all(this.filmsSelected.map( async (film) => {
+      const filmPredict = new FilmPredict(film);
+      const data = await this.predictionService.predict(filmPredict);
+      results["Disney+"] += data["Disney+"];
+      results["Hulu"] += data["Hulu"];
+      results["Netflix"] += data["Netflix"];
+      results["Prime Video"] += data["Prime Video"];
+    }));
+    results["Disney+"] /= this.filmsSelected.length;
+    results["Hulu"] /= this.filmsSelected.length;
+    results["Netflix"] /= this.filmsSelected.length;
+    results["Prime Video"] /= this.filmsSelected.length;
+    this.results = results;
   }
+
+
 
 }
 
 
+/*
+const results = {
+      "Disney+": 0,
+      Hulu: 0,
+      Netflix: 0,
+      "Prime Video": 0
+    }
+for (const filmSelected of this.filmsSelected) {
+      let predicted =  this.predictionService.predict(filmSelected);
+      
+      predicted.subscribe((data) => {
+        results["Disney+"] = data["Disney+"];
+        results["Hulu"] = data["Hulu"];
+        results["Netflix"] = data["Netflix"];
+        results["Prime Video"] = data["Prime Video"];
+      });
+    }
+        results["Disney+"] = data["Disney+"];
+        results["Hulu"] = data["Hulu"];
+        results["Netflix"] = data["Netflix"];
+        results["Prime Video"] = data["Prime Video"];
+
+    results["Disney+"] /= this.filmsSelected.length;
+    results["Hulu"] /= this.filmsSelected.length;
+    results["Netflix"] /= this.filmsSelected.length;
+    results["Prime Video"] /= this.filmsSelected.length;
+
+    //console.log(results);
+*/

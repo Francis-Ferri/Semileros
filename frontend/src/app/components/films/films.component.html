@@ -1,9 +1,27 @@
-<div class="mt-2">
-    <button (click)="recommend()" name="button" class="btn btn btn-primary btn-block"
-    [disabled]="this.filmsSelected.length == 0">
-        Realizar recomendación
-    </button>
+<div>
+    
 </div>
+<div class="container mt-3">
+    <div class="row">
+      <div class="col-sm">
+        <button (click)="recommend()" name="button" class="btn btn btn-primary btn-block" [disabled]="this.filmsSelected.length == 0">
+            Realizar recomendación
+        </button>
+      </div>
+      <div class="col-sm">
+        <b>Disney+:</b> {{results["Disney+"] | percent:"2.2-2"}}
+      </div>
+      <div class="col-sm">
+        <b>Hulu:</b> {{results["Hulu"] | percent:"2.2-2"}}
+      </div>
+      <div class="col-sm">
+        <b>Netflix:</b> {{results["Netflix"] | percent:"2.2-2"}}
+      </div>
+      <div class="col-sm">
+        <b>Prime Video:</b>  {{results["Prime Video"] | percent:"2.2-2"}}
+      </div>
+    </div>
+  </div>
     
 <div class="row row-cols-1 row-cols-md-3 g-4 mt-1">
     <app-film-card (filmSelected)="addToSelected($event)" 
